@@ -1,0 +1,95 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.button:active {
+    background-color: #3e8e41;
+}
+
+.results {
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+    </style>
+    <title>Función throttle</title>
+</head>
+<body>
+    <header>
+        <h1>Función Throttle</h1>
+    </header>
+    <div class="container">
+        <div class="textExplain">
+            <h2>¿Qué es la función throttle?</h2>
+            <p>La función throttle es una herramienta que reduce la frecuencia de ejecución de 
+                una función dentro de un intervalo de tiempo.</p>
+            <p>Para utilizarla, se define una función de callback y un valor de retardo (delay). 
+                Durante el delay, la función moderará las llamadas al callback. Un contador registra 
+                el número de eventos que ocurren durante este periodo.</p>
+            <p>El contador de eventos se reinicia cuando el tiempo transcurrido desde la última llamada 
+                supera el delay. En este caso el delay propuesto es de 2000ms. El
+                usuario tiene ese tiempo para generar 'clicks' a traves del boton
+                proporcionado. Luego, se muestra el resultado al usuario.</p>
+        </div>
+
+        <input id="click" type="button" class="button" value="Clicks throttle">
+        <div class="results">
+            <p id="resultado"></p>
+        </div>
+    </div>
+    <script src="../dist/sprint2.2.js"></script>
+</body>
+</html>
